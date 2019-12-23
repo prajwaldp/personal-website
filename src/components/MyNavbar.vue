@@ -6,8 +6,12 @@
           Prajwal D Prakash
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-          data-target="site-navbar">
+        <a role="button"
+           class="navbar-burger burger"
+           id="site-navbar-burger"
+           aria-label="menu"
+           aria-expanded="false"
+           @click="toggleNavbar">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -85,6 +89,16 @@ export default {
   data() {
     return {};
   },
+
+  methods: {
+    toggleNavbar() {
+      const $burger = document.getElementById('site-navbar-burger');
+      const $navbar = document.getElementById('site-navbar');
+
+      $burger.classList.toggle('is-active');
+      $navbar.classList.toggle('is-active');
+    }
+  }
 };
 </script>
 
