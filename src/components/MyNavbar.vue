@@ -2,9 +2,9 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item">
+        <router-link to="/" class="navbar-item">
           Prajwal D Prakash
-        </a>
+        </router-link>
 
         <a role="button"
            class="navbar-burger burger"
@@ -50,30 +50,30 @@
             </a>
 
             <div class="navbar-dropdown is-right">
-              <a class="navbar-item">
+              <router-link to="/blogs/tech" class="navbar-item">
                 <span class="icon">
                   <i class="fas fa-microchip"></i>
                 </span>
                 <span>
                   Tech Blog
                 </span>
-              </a>
-              <a class="navbar-item">
+              </router-link>
+              <!-- <router-link to="/blogs/strategy" class="navbar-item">
                 <span class="icon">
                   <i class="fas fa-chess-queen"></i>
                 </span>
                 <span>
                   Strategy Blog
                 </span>
-              </a>
-              <a class="navbar-item">
+              </router-link> -->
+              <router-link to="/blogs/photography" class="navbar-item">
                 <span class="icon">
                   <i class="fas fa-camera"></i>
                 </span>
                 <span>
                   Photography Blog
                 </span>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

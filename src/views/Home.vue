@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <section class="hero is-large is-warning is-bold has-text-centered">
+    <section class="hero is-fullscreen is-warning is-bold has-text-centered">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -10,11 +10,11 @@
             Programmer // Developer // Student
           </h2>
 
-          <p class="projects-link bounce" @click="scrollToProjectList">
+          <a class="projects-link bounce" v-scroll-to="'#projects-list-container'">
             <span class="icon is-big">
               <i class="fas fa-chevron-down fa-2x"></i>
             </span>
-          </p>
+          </a>
         </div>
       </div>
     </section>
@@ -41,23 +41,17 @@ export default {
   data() {
     return {};
   },
-
-  methods: {
-    scrollToProjectList() {
-
-      let projectList = document.getElementById("projects-list-container");
-
-      projectList.scrollIntoView({ 
-        behavior: 'smooth' 
-      });
-    }
-  }
 };
 </script>
 
 <style lang="scss">
 .hero {
-  min-height: calc(100vh - 3.25rem);
+
+  &.is-fullscreen {
+    min-height: calc(100vh - 3.25rem);
+    display: flex;
+    align-items: center;
+  }
 
   h1.title {
     margin-bottom: 3rem;
@@ -76,6 +70,7 @@ export default {
 
 #projects-list-container {
   padding: 1rem;
+  margin-top: 1rem;
 
   h1.title {
     padding-bottom: 1rem;
